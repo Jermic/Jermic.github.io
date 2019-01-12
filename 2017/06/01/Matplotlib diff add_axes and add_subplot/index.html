@@ -844,15 +844,23 @@
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
-    <span class="site-uv" title="总访客量">
+    <span class="post-meta-item-icon">
       <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
       <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
     </span>
   
 
   
-    <span class="site-pv" title="总访问量">
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
       <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
       <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
     </span>
   
@@ -982,44 +990,38 @@
 
 
   
-
-
-
   
 
 
 
 
-
-
-
-
   
-  
-  
-  
-  <script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  <script>
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(function (item) {
-      return GUEST.indexOf(item) > -1;
-    });
-    new Valine({
-      el: '#comments' ,
-      verify: false,
-      notify: false,
-      appId: 'vcr6W5x5Qqi1rI8qLJqxXSHu-gzGzoHsz',
-      appKey: 'srxkWi6JK8AB7BPVREvJGsBa',
-      placeholder: 'Just go go',
-      avatar: 'mm',
-      meta:guest,
-      pageSize: '10' || 10,
-      visitor: false
-    });
-  </script>
 
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function (item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'vcr6W5x5Qqi1rI8qLJqxXSHu-gzGzoHsz',
+    appKey: 'srxkWi6JK8AB7BPVREvJGsBa',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+</script>
 
 
 
