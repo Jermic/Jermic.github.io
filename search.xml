@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F01%2F12%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[\begin{align} a &= b + c \label{eq3} \\ x &= yz \label{eq4}\\ l &= m - n \label{eq5} \end{align}Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Matplotlib diff add_axes & add_subplot]]></title>
+    <url>%2F2017%2F06%2F01%2FMatplotlib%20diff%20add_axes%20and%20add_subplot%2F</url>
+    <content type="text"><![CDATA[Differences between add_axes and add_subplot 原文 Common groundsBoth, add_axes and add_subplot add an axes to a figure. They both return a matplotlib.axes.Axes object. However, the mechanism which is used to add the axes differs substancially. add_axesThe calling signature of add_axes is add_axes(rect), where rect is a list [x0, y0, width, height] denoting the lower left point of the new axes in figure coodinates (x0,y0) and its width and height. So the axes is positionned in absolute coordinates on the canvas. E.g. 12fig = plt.figure()ax = fig.add_axes([0,0,1,1]) places a figure in the canvas that is exactly as large as the canvas itself. add_subplotThe calling signature of add_subplot does not directly provide the option to place the axes at a predefined position. It rather allows to specify where the axes should be situated according to a subplot grid. The usual and easiest way to specify this position is the 3 integer notation, 12fig = plt.figure()ax = fig.add_subplot(231) In this example a new axes is created at the first position (1) on a grid of 2 rows and 3 columns. To produce only a single axes, add_subplot(111) would be used (First plot on a 1 by 1 subplot grid). The advantage of this method is that matplotlib takes care of the exact positioning. By default add_subplot(111) would produce an axes positioned at [0.125,0.11,0.775,0.77] or similar, which already leaves enough space around the axes for the title and the (tick)labels. However, this position may also change depending on other elements in the plot, titles set, etc. It can also be adjusted using pyplot.subplots_adjust(...) or pyplot.tight_layout(). In most cases, add_subplot would be the prefered method to create axes for plots on a canvas. Only in cases where exact positioning matters, add_axes might be useful. Example12345678910111213141516import matplotlib.pyplot as pltplt.rcParams[&quot;figure.figsize&quot;] = (5,3)fig = plt.figure()fig.add_subplot(241)fig.add_subplot(242)ax = fig.add_subplot(223)ax.set_title(&quot;subplots&quot;)fig.add_axes([0.77,.3,.2,.6])ax2 =fig.add_axes([0.67,.5,.2,.3])fig.add_axes([0.6,.1,.35,.3])ax2.set_title(&quot;random axes&quot;)plt.tight_layout()plt.show() AlternativeThe easiest way to obtain one or more subplots together with their handles is plt.subplots(). For one axes, use 1fig, ax = plt.subplots() or, if more subplots are needed, 1fig, axes = plt.subplots(nrows=3, ncols=4) The initial questionIn the initial question an axes was placed using fig.add_axes([0,0,1,1]), such that it sits tight to the figure boundaries. The disadvantage of this is of course that ticks, ticklabels, axes labels and titles are cut off. Therefore I suggested in one of the comments to the answer to use fig.add_subplot as this will automatically allow for enough space for those elements, and, if this is not enough, can be adjusted using pyplot.subplots_adjust(...) or pyplot.tight_layout().]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Notes</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Matplotlib</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[AndroidCrackTool for Mac]]></title>
+    <url>%2F2016%2F01%2F19%2FAndroidCrackTool%20for%20Mac%2F</url>
+    <content type="text"><![CDATA[AndroidCrackTool For Mac Git中文English 简介本软件集成了Android开发中常见的一些编译/反编译工具,方便用户对Apk进行逆向分析,提供Apk信息查看功能.目前主要功能包括(详细使用方法见使用说明): 反编译APK 重建APK 签名APK 优化APK DEX2JAR（APK2JAR） JDGUI 提取DEX 提取XML Class to smail Apk信息查看 Unicode转换 下载Git下载 网盘下载 密码: 9k5k 截图 版本更新:V2.511.提供英文版本 V2.3.2121.解决部分BUG2.更新内部工具版本 V2.2121.添加Class转Smail功能2.解决部分BUG V2.01234567891011121.修改主界面布局,添加新功能项 提取DEX、提取XML、ApkInfo、Unicode2.日志添加Start&amp;End标识3.提取DEX 从APK文件中提取DEX文件4.提取XML 从APK文件中提取并解析XML文件5.ApkInfo 扫描APK基本信息6.Unicode Unicode的加解转换7.解决部分BUG V1.0123456789101112131415主要功能:1.集成常用反编译破解工具2.反编译APK 默认使用ShakaApkTool（设置页面可切换为ApkTool） 对apk文件进行反编译3.重建APK 根据apk文件反编译得到的目录重新生成apk3.签名APK 使用SignApk对apk文件进行签名4.优化APK 使用Zipalign对apk文件进行优化对齐5.DEX2JAR（APK2JAR） 将apk文件中的dex文件转为jar格式文件,支持选择格式apk、dex6.JDGUI 使用JDGUI打开Jar文件 插件1234561.ShakaApkTool2.Apktool3.Dex2Jar4.Zipalign5.SignApk6.JDGUI 环境12341.MAC OSX 测试了10.11.2版本系统，其它版本系统未测试，如果出现问题邮件反馈一下2.JDK测试了JDK8，其它版本系统未测试，如果出现问题邮件反馈一下 使用说明12345678910111213141516171.点击浏览打开选择相应功能文件，如果格式错误将无法选中2.支持拖拽文件到路径，支持手动修改文件到路径（没有做详细判断，所以不要挑战程序健壮性了，正常用就好）3.添加源文件路径后，若于对应功能吻合将自动生成输出路径，后面会添加功能标识 O out 反编译标识 R rebuild 重建标识 S sign 签名标识 Z zipalign 优化标识 d2j dex2Jar 转Jar标识 dex dex 提取DEX smali CS2SM 转Smail标识4.选中相应功能，点击执行按钮（没有做功能过渡动画，根据LOG自行判断完成是否执行完毕，后续版本功能）5.点击打开可打开到对应输出目录文件6.点击交换按钮和互换输入输出路径7.支持日志导出8.检测插件版本（后续版本功能）9.设置面板可更换默认apktool工具i10.最重要的一点是，请注意使用部分功能时，输出文件如果存在会覆盖掉并不会做提示 历史版本:1234562016年08月22日 AndroidCrackTool 2.5 (For MAC)2016年08月02日 AndroidCrackTool 2.4 (For MAC)2016年05月09日 AndroidCrackTool 2.3.2 (For MAC)2016年01月26日 AndroidCrackTool 2.2 (For MAC)2016年01月13日 AndroidCrackTool 2.0 (For MAC)2015年12月31日 AndroidCrackTool 1.0 (For MAC) 123456感谢以上插件作者如遇到问题欢迎私信或邮件反馈有更好的建议欢迎提出来，尽快改进By JermicEmail:Jermic@qq.com]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+      <tags>
+        <tag>Mac</tag>
+        <tag>Android</tag>
+        <tag>Crack</tag>
+        <tag>Tool</tag>
+      </tags>
+  </entry>
+</search>
